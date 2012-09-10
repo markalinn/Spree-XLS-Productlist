@@ -1,10 +1,16 @@
-<table>
+	<table>
 	<tr>
-		<td>Name</td>
+		<td bgcolor="red">Product</td>
+		<td bgcolor="red">Price</td>
 	</tr>
 	<% @products.each do |product| %>
 	<tr>
 		<td><%= product.name %></td>
+		<td>
+			<% if product_price(product) %>
+				<%= product_price(product) %>
+			<% end %>
+		</td>
 	</tr>
 	<% end %>
-</table>
+	</table>
